@@ -6,10 +6,14 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">SL</th>
-      <th scope="col">Booking ID</th>
-      <th scope="col">Date</th>
-      <th scope="col">Status</th>
+      <th scope="col">booking_id</th>
+      <th scope="col">booking_date</th>
+      <th scope="col">passenger_id</th>
+      <th scope="col">flight_id</th>
+      <th scope="col">seat_number</th>
+      <th scope="col">Booking_class</th>
+      <th scope="col">payment_details</th>
+      <th scope="col">booking_status</th>
     </tr>
   </thead>
   <tbody>

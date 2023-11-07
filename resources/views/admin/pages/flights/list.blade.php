@@ -6,30 +6,32 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">id</th>
+      <th scope="col">number</th>
+      <th scope="col">destination</th>
+      <th scope="col">arrival_time</th>
+      <th scope="col">departure_time</th>
+      <th scope="col">airlines</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
+    @foreach($flights as $key=> $flight)
     <tr>
-      <th scope="row">1</th>
-      <td>Infant</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <th scope="row">{{$key+1}}</th>
+      <td>{{$flight->number}}</td>
+      <td>{{$flight->destination}}</td>
+      <td>{{$flight->arrival_time}}</td>
+      <td>{{$flight->departure_time}}</td>
+      <td>{{$flight->airlines}}</td>
+      <td>
+      <a href="" class="btn btn-success">View</a>
+      <a href="" class="btn btn-warning">Edit</a>
+      <a href="" class="btn btn-danger">Delete</a>
+</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>General</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Business class</td>
-      <td>@twitter</td>
-    </tr>
+    
+    @endforeach
   </tbody>
 </table>
 

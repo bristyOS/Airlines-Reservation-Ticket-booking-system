@@ -12,6 +12,7 @@
       <th scope="col">Address </th>
       <th scope="col">E-Mail</th>
       <th scope="col">contact_number</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -22,11 +23,17 @@
       <td>{{$passenger->address}}</td>
       <td>{{$passenger->email}}</td>
       <td>{{$passenger->contact_number}}</td>
+      <td>
+
+        <a href=""class="btn btn-success">Add</a>
+        <a href=""class="btn btn-danger">Delete</a>
+
+      </td>
     </tr>
    
   @endforeach  
   </tbody>
 </table>
-
+{{$passengers->links()}}
 
 @endsection

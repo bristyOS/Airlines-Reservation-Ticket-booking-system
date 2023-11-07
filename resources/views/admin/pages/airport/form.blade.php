@@ -4,13 +4,41 @@
 <form action="{{route('airportlist.store')}}" method='post'>
   @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1">Airport ID</label>
-    <input type="email" name="airport id"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID">
+    <label for="exampleInputEmail1">Airport_code</label>
+    <input type="string" name="airport_code"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID">
   
   </div>
   <div class="form-group">
-    <label for="exampleInputlocation1">Location</label>
-    <input type="location"name="location" class="form-control" id="exampleInputlocation1" placeholder="location">
+    <label for="exampleInputlocation1">Airport_name</label>
+    <input type="text"name="airport_name" class="form-control" id="exampleInputlocation1" placeholder="Enter name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">location</label>
+    <input type="text" name="location"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter location">
+  
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">terminal </label>
+    <input type="text" name="terminal"class="form-control" id="exampleInputEmail1"  placeholder="Enter terminal">
+  
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">service_available</label>
+    <input type="text" name="service_available"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="service">
+  
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputEmail1">runway</label>
+    <input type="text" name="runway"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter runway ">
+  
+  </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">gateway</label>
+    <input type="text" name="gateway"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter gate">
+  
   </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>

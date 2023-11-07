@@ -5,13 +5,24 @@
   @csrf
   <div class="form-group">
     <label for="name">Name</label>
-    <input type="text"name="name" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter your name">
+    <input required type="text" name="name" class="form-control" id="text" aria-describedby="emailHelp" placeholder="Enter your name">
+    @error('name')
+    <div class="alert alert-danger">{{$message}}</div>
+    @enderror
+
+
 </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email"name="email_address" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter email">
-    
+    <input required type="email"name="email_address" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter email">
+  
+    @error('email')
+    <div class="alert alert-danger">{{$message}}</div>
+    @enderror
   </div>
+  
+    
+    
   
   <div class="form-group">
     <label for="address">Address</label>
@@ -19,13 +30,13 @@
 </div>
 <div class="form-group">
     <label for="contact">Contact Number</label>
-    <input type="number"name="number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="Enter your contact number">
+    <input required type="number"name="number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="Enter your contact number">
+    @error('contact_number')
+    <div class="alert alert-danger">{{$message}}</div>
+    @enderror
 </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
-
-
-
 
 @endsection
