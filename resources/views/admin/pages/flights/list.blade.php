@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 <h2> Flights Information</h2>
-<a href="{{url('/flights/list/form')}}" type="button" class="btn btn-success">view flights</a>
+<a href="{{route('flightslist.form')}}" type="button" class="btn btn-success">view flights</a>
 
 <table class="table">
   <thead>

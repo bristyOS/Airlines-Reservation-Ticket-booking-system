@@ -1,17 +1,19 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\homeController;
-use App\Http\Controllers\seatController;
-use App\Http\Controllers\UsersController;
-use App\Http\Controllers\reportController;
-use App\Http\Controllers\AirportController;
-use App\Http\Controllers\BookingController;
-use App\Http\Controllers\FlightsController;
-use App\Http\Controllers\AirlinesController;
-use App\Http\Controllers\dashboardController;
-use App\Http\Controllers\PassengerController;
+use App\Http\Controllers\Backend\homeController;
+use App\Http\Controllers\Backend\seatController;
+use App\Http\Controllers\Backend\reportController;
+use App\Http\Controllers\Backend\AirportController;
+use App\Http\Controllers\Backend\BookingController;
+use App\Http\Controllers\Backend\FlightsController;
+use App\Http\Controllers\Backend\AirlinesController;
+use App\Http\Controllers\Backend\dashboardController;
+use App\Http\Controllers\Backend\PassengerController;
+use App\Http\Controllers\Frontend\HomeController as FrontendHomeController;
 use App\Http\Controllers\Backend\UserController;
+use App\Http\Controllers\Frontend\UserController as ControllersFrontendUserController;
+use App\Http\Controllers\Frontend\UserControllerController as FrontendUserController;
 
 /*
 ---------------------------------------------------------------------------
@@ -23,46 +25,82 @@ use App\Http\Controllers\Backend\UserController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/admin/login',[UserController::class,'loginForm'])->name('admin.login');
+
+//website route
+
+Route::get('/',[FrontendHomeController::class,'home'])->name('home');
+
+
+Route::get('/user/registration',[ControllersFrontendUserController::class,'registration'])->name('user.registration');
+Route::post('/user/registration/store',[ControllersFrontendUserController::class,'store'])->name('registration.store');
+
+Route::get('/user/login',[ControllersFrontendUserController::class,'login'])->name('user.login');
+Route::post('/user/login',[ControllersFrontendUserController::class,'dologin'])->name('user.login');
+
+
+
+
+Route::group(['middleware'=>'auth'],function(){
+
+
+});
+
+
+
+//All admin panel routes
+
+Route::group(['prefix'=>'admin'],function(){
+
+
+Route::get('/login',[UserController::class,'loginForm'])->name('admin.login');
 Route::post('/login-form-post',[UserController::class,'loginpost'])->name('admin.login.post');
 
 Route::group(['middleware'=>'auth'],function(){
 
-Route::get('/admin/logout',[UserController::class,'logout'])->name('admin.logout');
+Route::get('/logout',[UserController::class,'logout'])->name('admin.logout');
+
 Route::get('/',[homeController::class,'home'])->name('dashboard');
 
-Route::get('/users/list',[UsersController::class,'users'])->name('users.list');
+Route::get('/user/list',[UserController::class,'list'])->name('user.list');
+Route::get('/user/form',[UserController::class,'form'])->name('user.form');
+Route::post('/user/store',[UserController::class,'store'])->name('user.store');
 
-Route::get('/seat/list',[seatController::class,'list']);
+
+Route::get('/seat/list',[seatController::class,'list'])->name('seat.list');
 Route::post('/seatlist/store',[seatController::class,'store'])->name('seatlist.store');
-Route::get('/seat/list/form', [seatController::class,'form']);
+Route::get('/seat/list/form', [seatController::class,'form'])->name('seatlist.form');
 
-Route::get('/report/list',[reportController::class,'list']);
+Route::get('/report/list',[reportController::class,'list'])->name('report.list');
 
-Route::get('/passenger/list',[PassengerController::class,'list']);
+Route::get('/passenger/list',[PassengerController::class,'list'])->name('passenger.list');
+
+Route::get('/passenger/delete/{id}',[PassengerController::class,'delete'])->name('passenger.delete');
+
+
 
 Route::post('/passengerlist/store',[PassengerController::class,'store'])->name('passengerlist.store');
 
-Route::get('/passenger/list/form',[PassengerController::class,'form']);
+Route::get('/passenger/list/form',[PassengerController::class,'form'])->name('passengerlist.form');
 
-Route::get('/airport/list', [AirportController::class,'list']);
+Route::get('/airport/list', [AirportController::class,'list'])->name('airport.list');
 Route::post('/airportlist/store',[AirportController::class,'store'])->name('airportlist.store');
 
-Route::get('/airport/list/form', [AirportController::class,'form']);
+Route::get('/airport/list/form', [AirportController::class,'form'])->name('airportlist.form');
 
-Route::get('/airlines/list', [AirlinesController::class,'list']);
-Route::get('/airlines/list/form', [AirlinesController::class,'form']);
+Route::get('/airlines/list', [AirlinesController::class,'list'])->name('airlines.list');
+Route::get('/airlines/list/form', [AirlinesController::class,'form'])->name('airlineslist.form');
 Route::post('/airlineslist/store',[AirlinesController::class,'store'])->name('airlineslist.store');
 
 
 
-Route::get('/booking/list', [BookingController::class,'list']);
+Route::get('/booking/list', [BookingController::class,'list'])->name('booking.list');
 Route::post('/bookinglist/store',[BookingController::class,'store'])->name('bookinglist.store');
-Route::get('/booking/list/form', [BookingController::class,'form']);
+Route::get('/booking/list/form', [BookingController::class,'form'])->name('bookinglist.form');
 
-Route::get('/flights/list', [FlightsController::class,'list']);
-Route::get('/flights/list/form', [FlightsController::class,'form']);
+Route::get('/flights/list', [FlightsController::class,'list'])->name('flights.list');
+Route::get('/flights/list/form', [FlightsController::class,'form'])->name('flightslist.form');
 Route::post('/flightstlist/store',[FlightsController::class,'store'])->name('flightslist.store');
 
 Route::get('/dashboard/list', [dashboardController::class,'list']);
+});
 });

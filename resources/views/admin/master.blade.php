@@ -38,35 +38,35 @@
                                 Dasboard
                             </a>
                             
-                            <a class="nav-link" href="{{url('/users/list')}}">
+                            <a class="nav-link" href="{{route('user.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Users 
                             </a>
 
-                            <a class="nav-link" href="{{url('/passenger/list')}}">
+                            <a class="nav-link" href="{{route('passenger.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Passenger
                             </a>
 
-                            <a class="nav-link" href="{{url('/airport/list')}}">
+                            <a class="nav-link" href="{{route('airport.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Airport
                             </a>
 
 
-                            <a class="nav-link" href="{{url('/airlines/list')}}">
+                            <a class="nav-link" href="{{route('airlines.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Airlines
                             </a>
 
 
-                            <a class="nav-link" href="{{url('/booking/list')}}">
+                            <a class="nav-link" href="{{route('booking.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Booking
                             </a>
                             
                             
-                    <a class="nav-link" href="{{('/flights/list')}}">
+                    <a class="nav-link" href="{{route('flights.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Flights
                             </a>
@@ -74,13 +74,13 @@
 
 
                             
-                        <a class="nav-link" href="{{('/seat/list')}}">
+                        <a class="nav-link" href="{{route('seat.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Seat
                             </a>
 
 
-                            <a class="nav-link" href="{{('/report/list')}}">
+                            <a class="nav-link" href="{{route('report.list')}}">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Report Analysis 
                             </a>

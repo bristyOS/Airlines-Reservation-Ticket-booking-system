@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 <h2> Passenger Information </h2>
-<a href="{{url('/passenger/list/form')}}" type="button" class="btn btn-success">Add Passenger</a>
+<a href="{{route('passengerlist.form')}}" type="button" class="btn btn-success">Add Passenger</a>
 
 
 <table class="table">
@@ -11,6 +11,7 @@
       <th scope="col">Name</th>
       <th scope="col">Address </th>
       <th scope="col">E-Mail</th>
+    
       <th scope="col">contact_number</th>
       <th scope="col">Action</th>
     </tr>
@@ -22,11 +23,13 @@
       <td>{{$passenger->name}}</td>
       <td>{{$passenger->address}}</td>
       <td>{{$passenger->email}}</td>
+      
       <td>{{$passenger->contact_number}}</td>
       <td>
 
-        <a href=""class="btn btn-success">Add</a>
-        <a href=""class="btn btn-danger">Delete</a>
+      <a href=""class="btn btn-success">view</a>
+        <a href=""class="btn btn-primary">Edit</a>
+        <a href="{{route('passenger.delete',$passenger->id)}}"class="btn btn-danger">Delete</a>
 
       </td>
     </tr>

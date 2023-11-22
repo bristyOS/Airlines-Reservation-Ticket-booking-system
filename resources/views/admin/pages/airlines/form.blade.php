@@ -1,17 +1,22 @@
 @extends('admin.master')
 @section('content')
 
-<form action="{{route('airlineslist.store')}}" method='post'>
+<form action="{{route('airlineslist.store')}}" method='post'enctype="multipart/form-data">
   @csrf
   <div class="form-group">
-    <label for="exampleInputEmail1">Airlines ID</label>
-    <input type="email" name="airport id"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID">
+    <label for="Airlines">Airlines_name </label>
+    <input type="string" name="Airlines_name"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
   
-  </div>
-  <div class="form-group">
-    <label for="exampleInputlocation1">Location</label>
-    <input type="location"name="location" class="form-control" id="exampleInputlocation1" placeholder="location">
-  </div>
+    <div class="form-group">
+    <label for="Airport">Airport_name </label>
+    <input type="string" name="Airport_name"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter name">
+  
+    <div class="from-group">
+  <label for="" class="form-label">Upload image</label>
+  <input class="form-control" name="image" type="file" id="formFileMultiple" multiple>
+</div>
+
+    
   
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

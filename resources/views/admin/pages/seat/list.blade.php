@@ -2,7 +2,7 @@
 @section('content')
 
 <h2> view seat information</h2>
-<a href="{{url('/seat/list/form')}}" type="button" class="btn btn-success">view seat</a>
+<a href="{{route('seatlist.form')}}" type="button" class="btn btn-success">view seat</a>
 
 <table class="table">
   <thead>

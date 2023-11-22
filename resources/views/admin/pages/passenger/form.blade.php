@@ -14,7 +14,7 @@
 </div>
   <div class="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input required type="email"name="email_address" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter email">
+    <input required type="email"name="email" class="form-control" id="" aria-describedby="emailHelp" placeholder="Enter email">
   
     @error('email')
     <div class="alert alert-danger">{{$message}}</div>
@@ -30,7 +30,7 @@
 </div>
 <div class="form-group">
     <label for="contact">Contact Number</label>
-    <input required type="number"name="number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="Enter your contact number">
+    <input required type="number"name="contact_number" class="form-control" id="number" aria-describedby="emailHelp" placeholder="Enter your contact number">
     @error('contact_number')
     <div class="alert alert-danger">{{$message}}</div>
     @enderror
