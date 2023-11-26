@@ -9,7 +9,7 @@
       <th scope="col">Ailines_Name</th>
       <th scope="col"> Airport_Name</th>
       <th scope="col"> Airlines_image</th>
-    
+      <th scope="col"> Action</th>
     </tr>
   </thead>
   <tbody>
@@ -21,7 +21,13 @@
     <td>{{$Airline->Airport_name}}</td>
 </td>
 <td>
-  <img src="{{url('/uploads/'.$Airline->image)}}" alt="">
+
+  <img height="120" width="120" src="{{url('uploads/'.$Airline->image)}}" alt="image">
+</td>
+<td>
+  <a href=""class="btn btn-success">view</a>
+        <a href=""class="btn btn-primary">Edit</a>
+        <a href=""class="btn btn-danger">Delete</a>
 </td>
 
     </tr>

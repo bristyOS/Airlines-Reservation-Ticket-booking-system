@@ -30,7 +30,7 @@
 				          <li><a href="about.html">About</a></li>
 				          
 				          
-				          <li><a href="insurance.html">Insurence</a></li>
+				          <li><a href="insurance.html">My Ticket</a></li>
 
                     
 				          	

@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 
-<form action="{{route('airlineslist.store')}}" method='post'enctype="multipart/form-data">
+<form action="{{route('airlineslist.store')}}" method='post' enctype="multipart/form-data">
   @csrf
   <div class="form-group">
     <label for="Airlines">Airlines_name </label>
