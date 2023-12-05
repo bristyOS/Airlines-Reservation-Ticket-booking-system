@@ -15,16 +15,12 @@ return new class extends Migration
     {
         Schema::create('seats', function (Blueprint $table) {
             $table->id();
-            $table->string('flight_number');
-            $table->string('seat_number');
             $table->text('seat_class');
+            $table->string('image')->nullable;
             $table->text('seat_type');
             $table->string('seat_price');
             $table->text('location');
             $table->string('seat_allocation');
-            
-
-        
             $table->timestamps();
         });
     }

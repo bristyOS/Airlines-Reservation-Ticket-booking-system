@@ -28,7 +28,7 @@
       <td>
 
       <a href=""class="btn btn-success">view</a>
-        <a href=""class="btn btn-primary">Edit</a>
+        <a href="{{route('passenger.edit',$passenger->id)}}"class="btn btn-primary">Edit</a>
         <a href="{{route('passenger.delete',$passenger->id)}}"class="btn btn-danger">Delete</a>
 
       </td>

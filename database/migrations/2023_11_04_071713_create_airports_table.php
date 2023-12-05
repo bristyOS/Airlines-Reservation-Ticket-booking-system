@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('Airport_code');
             $table->text('airport_name');
+            $table->text('form_airport');
+            $table->text('to_airport');
             $table->text('location');
             $table->text('terminal')->nullable();
             $table->text('service_available');

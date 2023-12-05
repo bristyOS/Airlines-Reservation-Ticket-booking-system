@@ -14,6 +14,10 @@ class seatController extends Controller
         $seats=Seat::all();
         return view ('admin.pages.seat.list',compact ('seats'));
     }
+
+
+
+    
     
     public function form()
     {
@@ -21,16 +25,24 @@ class seatController extends Controller
     }
 
     public function store(request $request){
+
+            $fileName = null;
+            if($request->hasFile ('image')){
+                $photo = $request->file ('image');
+                $fileName = date('Ymdhis').'.'. $photo->getClientOriginalExtension();
+                $photo->storeAs('uploads/', $fileName);
+            }
+
        // dd($request->all());
        Seat::create([
-            'flight_number'=>$request->flight_number,
-            'seat_number'=>$request->seat_number,
+            
             'seat_class'=>$request->seat_class,
+            'image'=>$fileName,
             'seat_type'=>$request->seat_type,
             'seat_price'=>$request->seat_price,
             'location'=>$request->location,
             'seat_allocation'=>$request->seat_allocation,
-
+    
 
        ]);
        return redirect()->back();

@@ -23,6 +23,9 @@ class AirportController extends Controller
 Airport::create([
 'Airport_code'=>$request->airport_code,
 'airport_name'=>$request->airport_name,
+'form_airport'=>$request->form_airport,
+'to_airport'=>$request->to_airport,
+
 'location'=>$request->location,
 'terminal'=>$request->terminal,
 'service_available'=>$request->service_available,

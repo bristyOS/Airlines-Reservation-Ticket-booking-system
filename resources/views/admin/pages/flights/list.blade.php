@@ -9,9 +9,13 @@
       <th scope="col">id</th>
       <th scope="col">number</th>
       <th scope="col">destination</th>
+      <th scope="col">From_airport</th>
+      <th scope="col">To_airport</th>
       <th scope="col">arrival_time</th>
       <th scope="col">departure_time</th>
       <th scope="col">airlines</th>
+      <th scope="col">price</th>
+      <th scope="col">image</th>
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -21,9 +25,20 @@
       <th scope="row">{{$key+1}}</th>
       <td>{{$flight->number}}</td>
       <td>{{$flight->destination}}</td>
+      <td>{{$flight->fromAirport->airport_name}}</td>
+      <td>{{$flight->toAirport->airport_name}}</td>
       <td>{{$flight->arrival_time}}</td>
       <td>{{$flight->departure_time}}</td>
       <td>{{$flight->airlines}}</td>
+      <td>{{$flight->price}}</td>
+</td>
+<td>
+<img height="70" width="70" src="{{url('uploads/'.$flight->image)}}" alt="image">
+
+
+
+</td>
+
       <td>
       <a href="" class="btn btn-success">View</a>
       <a href="" class="btn btn-warning">Edit</a>

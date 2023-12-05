@@ -8,7 +8,7 @@
     <tr>
       <th scope="col">booking_id</th>
       <th scope="col">booking_date</th>
-      <th scope="col">passenger_id</th>
+      <th scope="col">passenger_name</th>
       <th scope="col">flight_id</th>
       <th scope="col">seat_number</th>
       <th scope="col">Booking_class</th>

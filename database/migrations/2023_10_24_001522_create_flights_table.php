@@ -15,9 +15,13 @@ return new class extends Migration
             $table->id();
             $table->string('number',20);
             $table->string('destination');
+            $table->string('from_airport');
+            $table->string('to_airport');
             $table->time('arrival_time');
             $table->time('departure_time');
             $table->string('airlines',20);
+            $table->string('price');
+            $table->string('image')->nullable();
             $table->timestamps();
             
         });

@@ -14,6 +14,17 @@
   </div>
 
   <div class="form-group">
+    <label for="exampleInputlocation1">From_airport</label>
+    <input type="text"name="form_airport" class="form-control" id="exampleInputlocation1" placeholder="Enter name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputlocation1">To_airport</label>
+    <input type="text"name="to_airport" class="form-control" id="exampleInputlocation1" placeholder="Enter name">
+  </div>
+  
+
+  <div class="form-group">
     <label for="exampleInputEmail1">location</label>
     <input type="text" name="location"class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter location">
   

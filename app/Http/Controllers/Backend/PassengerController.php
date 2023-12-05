@@ -23,7 +23,7 @@ class PassengerController extends Controller
   
     public function delete ($id)
     {
-$passengers=Passenger::find($id);
+$passengers=Passenger::find($id); 
 if ($passengers)
 {
     $passengers->delete();
@@ -32,7 +32,11 @@ if ($passengers)
    return redirect()->back();
     }
         
+public function edit($id){
+    $passengers=Passenger::find($id);
+    return view();
 
+}
     
 
 

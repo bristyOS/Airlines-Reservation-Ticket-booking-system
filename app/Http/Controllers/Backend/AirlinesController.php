@@ -13,13 +13,31 @@ class AirlinesController extends Controller
         $Airlines = Airline::all();
         return view('admin.pages.airlines.list', compact('Airlines'));
     }
+
+//delete
+
+public function delete ($id)
+{
+$Airlines=Airline::find($id);
+if ($Airlines)
+{
+    $Airlines->delete();
+}
+notify()->success('airlines deleted successfully.');
+return redirect()->back();
+}
+
+
+
     public function form()
     {
         return view('admin.pages.airlines.form');
     }
+
+
+
     public function store(request $request)
     {
-        // dd($request->all());
         //image handaling
         // $photo = $request->file('image');
         // $fileName = date('Ymdhis') . '.' . $photo->getClientOriginalExtension();
@@ -28,11 +46,12 @@ class AirlinesController extends Controller
         $fileName = null;
         if($request->hasFile ('image')){
         $photo = $request->file ('image');
-        $fileName = date('Ymdhis').'.'.$photo->getClientOriginalExtension();
+        $fileName = date('Ymdhis').'.'. $photo->getClientOriginalExtension();
         $photo->storeAs('uploads/', $fileName);
         }
 
-        //dd($fileName);
+        
+
 
             Airline::create([
                 'Airlines_name'=>$request->Airlines_name, 
