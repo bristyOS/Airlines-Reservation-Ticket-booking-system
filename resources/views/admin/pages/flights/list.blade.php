@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 <h2> Flights Information</h2>
-<a href="{{route('flightslist.form')}}" type="button" class="btn btn-success">view flights</a>
+<a href="{{route('flightslist.form')}}" type="button" class="btn btn-success">Add flights</a>
 
 <table class="table">
   <thead>
@@ -29,7 +29,7 @@
       <td>{{$flight->toAirport->airport_name}}</td>
       <td>{{$flight->arrival_time}}</td>
       <td>{{$flight->departure_time}}</td>
-      <td>{{$flight->airlines}}</td>
+      <td>{{$flight->airline->Airlines_name}}</td>
       <td>{{$flight->price}}</td>
 </td>
 <td>
@@ -40,9 +40,9 @@
 </td>
 
       <td>
-      <a href="" class="btn btn-success">View</a>
-      <a href="" class="btn btn-warning">Edit</a>
-      <a href="" class="btn btn-danger">Delete</a>
+      
+      <a href="" class="btn btn-primary">Edit</a>
+      <a href="{{route('flights.delete',$flight->id)}}" class="btn btn-danger">Delete</a>
 </td>
     </tr>
     

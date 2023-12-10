@@ -6,13 +6,17 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Airline;
 
+
 class AirlinesController extends Controller
 {
     public function list()
     {
+        
         $Airlines = Airline::all();
         return view('admin.pages.airlines.list', compact('Airlines'));
     }
+
+
 
 //delete
 
@@ -27,6 +31,12 @@ notify()->success('airlines deleted successfully.');
 return redirect()->back();
 }
 
+//edit------------
+public function edit($id)
+{
+    $Airlines=Airline::find($id);
+    return view('admin.pages.airlines.edit');
+}
 
 
     public function form()

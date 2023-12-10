@@ -11,11 +11,25 @@ use Illuminate\Http\Request;
 class FlightsController extends Controller
 {
     public function list(){
-        $flights=Flight::with(['fromAirport','toAirport'])->get();
+        $flights=Flight::with(['fromAirport','toAirport', 'airline'])->get();
         // dd($flights);
         return view ('admin.pages.flights.list',compact ('flights'));
 
     }
+
+    //Delete-----------
+
+    public function delete ($id)
+   {
+   $flights=Flight::find($id);
+     if ($flights)
+  {
+    $flights->delete();
+  }
+notify()->success('flight deleted successfully.');
+return redirect()->back();
+}
+
 
     public function form(){
 

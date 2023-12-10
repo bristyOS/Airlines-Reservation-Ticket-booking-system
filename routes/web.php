@@ -18,6 +18,8 @@ use App\Http\Controllers\Frontend\BookticketController;
 use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\seatController as FrontendseatController;
 use App\Http\Controllers\Frontend\AirlinesController as FrontendAirlinesController;
+use App\Http\Controllers\Frontend\BuynowController;
+
 /*
 ---------------------------------------------------------------------------
 | Web Routes
@@ -51,9 +53,9 @@ Route::get('/booktickets/form',[BookticketController::class,'form'])->name('book
 
 Route::get('/search/form',[SearchController::class,'list'])->name('Search.form');
 
-Route::get('/bookform',[SearchController::class,'passenger'])->name('book.form');
+Route::get('/bookform/{id}',[SearchController::class,'passenger'])->name('book.form');
 
-
+Route::get('/successful/form',[BuynowController::class,'successful'])->name('successful.form');
 
 Route::group(['middleware'=>'auth'],function(){
 
@@ -77,6 +79,8 @@ Route::get('/logout',[UserController::class,'logout'])->name('admin.logout');
 Route::get('/',[homeController::class,'home'])->name('dashboard');
 
 Route::get('/user/list',[UserController::class,'list'])->name('user.list');
+
+Route::get('/user/delete/{id}',[UserController::class,'delete'])->name('user.delete');
 Route::get('/user/form',[UserController::class,'form'])->name('user.form');
 Route::post('/user/store',[UserController::class,'store'])->name('user.store');
 
@@ -107,6 +111,8 @@ Route::get('/airport/list/form', [AirportController::class,'form'])->name('airpo
 Route::get('/airlines/list', [AirlinesController::class,'list'])->name('airlines.list');
 
 Route::get('/airlines/delete/{id}',[AirlinesController::class,'delete'])->name('airlines.delete');
+
+Route::get('/airlines/edit/{id}',[AirlinesController::class,'edit'])->name('airlines.edit');
 Route::get('/airlines/list/form', [AirlinesController::class,'form'])->name('airlineslist.form');
 Route::post('/airlineslist/store',[AirlinesController::class,'store'])->name('airlineslist.store');
 
@@ -117,6 +123,8 @@ Route::post('/bookinglist/store',[BookingController::class,'store'])->name('book
 Route::get('/booking/list/form', [BookingController::class,'form'])->name('bookinglist.form');
 
 Route::get('/flights/list', [FlightsController::class,'list'])->name('flights.list');
+
+Route::get('/flights/delete/{id}',[FlightsController::class,'delete'])->name('flights.delete');
 Route::get('/flights/list/form', [FlightsController::class,'form'])->name('flightslist.form');
 Route::post('/flightstlist/store',[FlightsController::class,'store'])->name('flightslist.store');
 

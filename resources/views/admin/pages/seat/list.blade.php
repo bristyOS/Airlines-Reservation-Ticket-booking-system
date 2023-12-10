@@ -2,7 +2,7 @@
 @section('content')
 
 <h2> view seat information</h2>
-<a href="{{route('seatlist.form')}}" type="button" class="btn btn-success">view seat</a>
+<a href="{{route('seatlist.form')}}" type="button" class="btn btn-success">Add seat</a>
 
 <table class="table">
   <thead>
@@ -35,7 +35,7 @@
       <td>
         <a href=""class="btn btn-success">view</a>
         <a href=""class="btn btn-primary">Edit</a>
-        <a href=""class="btn btn-danger">Delete</a>
+        <a href="{{route('seat.delete',$seat->id)}}"class="btn btn-danger">Delete</a>
 </td>
 </tr>
 

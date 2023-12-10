@@ -56,6 +56,20 @@ return view('admin.pages.user.list',compact('users'));
 
 }
 
+//delete-------------
+public function delete ($id)
+{
+$users=User::find($id);
+  if ($users)
+{
+ $users->delete();
+}
+notify()->success('Users deleted successfully.');
+return redirect()->back();
+}
+
+
+
 public function form(){
   return view('admin.pages.user.form');
 }

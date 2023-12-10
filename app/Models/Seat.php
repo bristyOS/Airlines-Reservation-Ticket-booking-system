@@ -12,4 +12,5 @@ class Seat extends Model
        // 'flight_number','seat_number','seat_class','seat_type','seat_price','location','seat_allocation'
     //];
     protected $guarded=[];
+    
 }

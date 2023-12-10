@@ -26,7 +26,7 @@ class HomeController extends Controller
 
     //search airlines in header
 
-    public function search(Request $request)
+    public function  search(Request $request)
     {
          //dd($request()->all());
 

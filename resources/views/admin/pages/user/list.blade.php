@@ -24,7 +24,7 @@
       <td>
         <a href=""class="btn btn-success">view</a>
         <a href=""class="btn btn-primary">edit</a>
-        <a href=""class="btn btn-danger">delete</a>
+        <a href="{{route('user.delete',$user->id)}}"class="btn btn-danger">delete</a>
       </td>
 
       

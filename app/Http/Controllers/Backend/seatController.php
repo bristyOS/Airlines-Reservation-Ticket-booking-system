@@ -11,10 +11,23 @@ class seatController extends Controller
 {
     public function list()
     {
+
+        
         $seats=Seat::all();
         return view ('admin.pages.seat.list',compact ('seats'));
     }
+//delete----------------
 
+public function delete ($id)
+   {
+   $seats=Seat::find($id);
+     if ($seats)
+  {
+    $seats->delete();
+  }
+notify()->success('Seat deleted successfully.');
+return redirect()->back();
+}
 
 
     

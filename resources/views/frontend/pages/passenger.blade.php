@@ -65,28 +65,29 @@
                     <h2>Review-Your Booking</h2>
                 </div>
 
-                
                 <div class="card-body">
 
                     <div class="row">
                         <div class="col-md-6">
-
-                            20:00
-                            Monday ,4 Dec,2023
-                            (DAC)
-                            Dhaka
+                         
+                        <h6> Departure_time</h6>
+                        
+                            {{$Flights->departure_time}} <br>
+                            <h6>From_airport</h6>
+                            {{$Flights->fromAirport->airport_name}}
 
                         </div>
 
                         <div class="col-md-6">
-                            Arrival_time
-                            20:00
-                            Monday ,4 Dec,2023
-                            (DAC)
-                            Dhaka
+                          <h6> Arrival_time</h6>
+                        {{$Flights->arrival_time}} <br>p
+                        <h6> To_Airport</h6>
+                        {{$Flights->toAirport->airport_name}}
 
+                        
 
                         </div>
+                        
                     </div>
                     <h2> </h2>
                     <hr>
@@ -94,10 +95,13 @@
                         <div style="width: 10px; height: 10px;" class="col-md-2">
                             <img src="{{ asset('uploads/passenger/1.jpg') }}" alt="" style="width: 50px; height: 40px;">
                         </div>
-                        <div class="col-md-8">
-                            Us Bangla Airlines
+                        <div class="col-md-7">
+                            <h6> Airlines</h6>
+                            {{$Flights->airline->Airlines_name}}
+                            
                         </div>
-                        <div class="col-md-2"> Economy Class</div>
+                              
+                        <div class="col-md-3"> <h6>price {{$Flights->price}}</div> </h6>
                     </div>
                     <h1></h1>
                 </div>
@@ -108,6 +112,6 @@
     </div>
     </form>
 </div>
-<a class="btn btn-danger form-control text-center" href=""> Buy now</a>
+<a class="btn btn-danger form-control text-center" href="{{route('successful.form')}}"> Buy now</a>
 
 @endsection

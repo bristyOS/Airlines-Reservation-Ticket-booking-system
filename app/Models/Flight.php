@@ -20,7 +20,11 @@ class Flight extends Model
     {
         return $this->belongsTo(Airport::class,'to_airport'); 
     }
-    
+
+    public function airline()
+    {
+        return $this->belongsTo(Airline::class, 'airlines'); 
+    }
     
 
 }

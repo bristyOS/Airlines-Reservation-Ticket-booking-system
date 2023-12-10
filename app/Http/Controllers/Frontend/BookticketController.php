@@ -15,6 +15,9 @@ class BookticketController extends Controller
     
      
         return view('frontend.pages.booktickets',compact('airline'));
+
+       
+
     }
 
    

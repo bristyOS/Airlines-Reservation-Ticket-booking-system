@@ -31,11 +31,13 @@ if ($passengers)
    notify()->success('passenger delete successfilly.');
    return redirect()->back();
     }
-        
-public function edit($id){
-    $passengers=Passenger::find($id);
-    return view();
+        //edit--------
 
+       public function edit($id)
+       {
+        $passengers=Passenger::find($id);
+    return view('admin.pages.passenger.edit',compact ('passengers'));
+     
 }
     
 

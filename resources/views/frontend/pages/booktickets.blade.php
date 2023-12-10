@@ -77,7 +77,7 @@
         </div>
     </div>
 </div>
-<div class="row">
+<!--<div class="row">
     <div class="col-md-4 mb-4">
         <div class="form-control d-flex flex-column">
             <p class="h-blue">ADULTS(18+)</p>
@@ -103,12 +103,16 @@
                 <option value="3">3</option>
             </select>
         </div>
-    </div>
-    <div class="col-md-4 mb-4">
-        <div class="form-control d-flex flex-column">
+    </div>---->
+
+
+    <div class="row">
+        <div class="col-md-6 col-12 mb-4">
+        <div class="form-control d-flex flex-column" name="travel_class">
             <p class="h-blue">TRAVEL CLASS</p>
-            <input class="form-control" name="travel_class" type="text">
-            <select class="border-0 outline-none">
+            
+            <select class="from-control border-0 outline-none" name="travel_class">
+
 
                 <option value="" hidden selected>Class</option>
                 <option value="1">Economy</option>
@@ -117,6 +121,22 @@
                 <option value="3">Business</option>
             </select>
         </div>
+
+        <div class="col-md-6 col-12 mb-4">
+        <div class="form-control d-flex flex-column" name="travel_type">
+            <p class="h-blue">TRAVEL Type</p>
+            
+            <select class="from-control border-0 outline-none" name="travel_type">
+
+
+                <option value="" hidden selected>Class</option>
+                <option value="1">Window</option>
+
+                <option value="2">Middle</option>
+                <option value="3">Aisle</option>
+            </select>
+        </div>
+        
     </div>
 </div>
 <button type="submit" class="btn btn-primary form-control text-center"> SEARCH FLIGHTS</button>

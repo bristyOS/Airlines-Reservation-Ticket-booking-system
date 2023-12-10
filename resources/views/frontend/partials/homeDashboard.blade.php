@@ -45,7 +45,7 @@
                         <img class="img-fluid" src="{{url('uploads/'.$Airline->image)}}" alt="">
                     </div>
                     <div class="desc" style=>
-                        <a href="{{route('single.airline',$Airline->id)}}" class="price-btn">$150</a>
+                        <a href="{{route('single.airline',$Airline->id)}}" class="price-btn"></a>
                         <h4 style=>Airlines</h4>
                         <p>{{$Airline->Airlines_name}} </p>
                     </div>
@@ -113,13 +113,13 @@
             <div class="active-testimonial">
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="4ea15cc5c817234fc2864f46b3fbe992-chittagong-hill-tracts.jpg" alt="">
+                        <img class="img-fluid" src="{{ asset('uploads/passenger/1.jpg') }}" alt="">
                     </div>
                     <div class="desc">
                         <p>
                             Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
                         </p>
-                        <h4>Harriet Maxwell</h4>
+                        <h4>Chittagong</h4>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -131,13 +131,13 @@
                 </div>
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user2.png" alt="">
+                        <img class="img-fluid" src="{{ asset('uploads/passenger/1.jpg') }}" alt="">
                     </div>
                     <div class="desc">
                         <p>
                             A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
                         </p>
-                        <h4>Carolyn Craig</h4>
+                        <h4>Barishal</h4>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -149,13 +149,13 @@
                 </div>
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user1.png" alt="">
+                        <img class="img-fluid" src="{{ asset('uploads/passenger/1.jpg') }}" alt="">
                     </div>
                     <div class="desc">
                         <p>
                             Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
                         </p>
-                        <h4>Harriet Maxwell</h4>
+                        <h4>Cox's Bazar</h4>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -167,13 +167,13 @@
                 </div>
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user2.png" alt="">
+                        <img class="img-fluid" src="{{ asset('uploads/passenger/1.jpg') }}" alt="">
                     </div>
                     <div class="desc">
                         <p>
                             A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
                         </p>
-                        <h4>Carolyn Craig</h4>
+                        <h4>Dhaka</h4>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -185,13 +185,13 @@
                 </div>
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user1.png" alt="">
+                        <img class="img-fluid" src="{{ asset('uploads/passenger/1.jpg') }}" alt="">
                     </div>
                     <div class="desc">
                         <p>
                             Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.
                         </p>
-                        <h4>Harriet Maxwell</h4>
+                        <h4>Barishal</h4>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -203,13 +203,13 @@
                 </div>
                 <div class="single-testimonial item d-flex flex-row">
                     <div class="thumb">
-                        <img class="img-fluid" src="img/elements/user2.png" alt="">
+                        <img class="img-fluid" src="{{ asset('uploads/passenger/1.jpg') }}" alt="">
                     </div>
                     <div class="desc">
                         <p>
                             A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
                         </p>
-                        <h4>Carolyn Craig</h4>
+                        <h4>Shylet</h4>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
                             <span class="fa fa-star checked"></span>
@@ -250,7 +250,7 @@
 
 
 <!-- Start blog Area -->
-<section class="recent-blog-area section-gap">
+<!--section class="recent-blog-area section-gap">
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="menu-content pb-60 col-lg-9">
@@ -410,5 +410,5 @@
             </div>
         </div>
     </div>
-</section>
+</section--->
 @endsection

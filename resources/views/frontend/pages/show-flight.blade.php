@@ -34,7 +34,8 @@
             <div class="fw-tripinfo-date"><h6>{{$Flight->departure_time}}</div></h6>
                     
                                 <h6> Airlines</h6>
-            <div class="fw-tripinfo-date"><h6>{{$Flight->airlines}}</div></h6>
+
+            <div class="fw-tripinfo-date"><h6>{{$Flight->airline->Airlines_name}}</div></h6>
             <div class="fw-tripinfo-date">{{$Flight->image}}</div>
            
         </div>
@@ -68,7 +69,7 @@
 
         <div class="fw-fareinfo col-md-2">
             <div class="fw-tripinfo-label"><h6>From_airport</div></h6>
-            <div class="fw-fare-currency-label"><h6>{{$Flight->from_airport}}</div></h6>
+            <div class="fw-fare-currency-label"><h6>{{$Flight->fromAirport->airport_name}}</div></h6>
             
             <div class="fw-fare-currency">
 
@@ -78,7 +79,7 @@
 
         <div class="fw-fareinfo col-md-2">
             <div class="fw-tripinfo-label"><h6>To_airport</div></h6>
-            <div class="fw-fare-currency-label"><h6>{{$Flight->to_airport}}</div></h6>
+            <div class="fw-fare-currency-label"><h6>{{$Flight->toAirport->airport_name}}</div></h6>
             
             <div class="fw-fare-currency">
 
@@ -88,7 +89,7 @@
 
         <div class="col-md-2">
             <button type="button" class="btn btn-primary">
-            <a class="btn btn-primary form-control text-center" href="{{route('book.form')}}" > Book now</a>
+            <a class="btn btn-primary form-control text-center" href="{{route('book.form',$Flight->id)}}" > Book now</a>
                 
         </div>
     </div>

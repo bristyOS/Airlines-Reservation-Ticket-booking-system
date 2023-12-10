@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('destination');
             $table->string('from_airport');
             $table->string('to_airport');
+          
+
             $table->time('arrival_time');
             $table->time('departure_time');
             $table->string('airlines',20);
