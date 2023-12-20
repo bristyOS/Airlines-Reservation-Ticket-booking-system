@@ -65,6 +65,7 @@ return redirect()->back();
         'departure_time' =>$request->departure_time,
         'airlines' =>$request->airlines,
         'price' =>$request->price,
+        'seats'=>$request->seats,
         'image' => $fileName,
 
     ]); 

@@ -68,7 +68,7 @@
             <div class="menu-content pb-70 col-lg-9">
                 <div class="title text-center">
                     <h1 class="mb-10">Other issues we can help you </h1>
-                    <p>passenger can saw available seats</p>
+                    <p>passenger can get idea about seats price range</p>
                 </div>
             </div>
         </div>
@@ -210,13 +210,7 @@
                             A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
                         </p>
                         <h4>Shylet</h4>
-                        <div class="star">
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
+                       
                     </div>
                 </div>
             </div>

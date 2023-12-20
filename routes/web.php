@@ -19,6 +19,7 @@ use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\seatController as FrontendseatController;
 use App\Http\Controllers\Frontend\AirlinesController as FrontendAirlinesController;
 use App\Http\Controllers\Frontend\BuynowController;
+use App\Http\Controllers\SslCommerzPaymentController;
 
 /*
 ---------------------------------------------------------------------------
@@ -55,7 +56,25 @@ Route::get('/search/form',[SearchController::class,'list'])->name('Search.form')
 
 Route::get('/bookform/{id}',[SearchController::class,'passenger'])->name('book.form');
 
-Route::get('/successful/form',[BuynowController::class,'successful'])->name('successful.form');
+
+Route::post('/successful/form/{id}',[BuynowController::class,'successful'])->name('successful.form');
+Route::get('/printticket/form/{id}',[BuynowController::class,'printticket'])->name('print.ticket');
+
+// SSLCOMMERZ Start
+Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
+Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
+
+Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
+Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
+
+Route::post('/success', [SslCommerzPaymentController::class, 'success']);
+Route::post('/fail', [SslCommerzPaymentController::class, 'fail']);
+Route::post('/cancel', [SslCommerzPaymentController::class, 'cancel']);
+Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
+// SSLCOMMERZ END
+
+
+
 
 Route::group(['middleware'=>'auth'],function(){
 
@@ -77,6 +96,7 @@ Route::group(['middleware'=>'auth'],function(){
 Route::get('/logout',[UserController::class,'logout'])->name('admin.logout');
 
 Route::get('/',[homeController::class,'home'])->name('dashboard');
+Route::get('/dashboard',[dashboardController::class,'list'])->name('dashboard.list');
 
 Route::get('/user/list',[UserController::class,'list'])->name('user.list');
 

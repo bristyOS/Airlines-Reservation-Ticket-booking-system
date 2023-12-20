@@ -48,7 +48,7 @@
         <h1>Success</h1> 
         <p>We received your purchase request;<br/> we'll be in touch shortly!</p>
 
-    <a href=""class="btn btn-dgitanger">Print your Ticket</a>
+    <a href="{{route('print.ticket',$Flight_id)}}"class="btn btn-danger">Print your Ticket</a>
       </div>
     </body>
     

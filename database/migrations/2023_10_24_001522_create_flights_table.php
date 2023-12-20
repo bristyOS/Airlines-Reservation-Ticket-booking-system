@@ -23,6 +23,7 @@ return new class extends Migration
             $table->time('departure_time');
             $table->string('airlines',20);
             $table->string('price');
+            $table->string('seats');
             $table->string('image')->nullable();
             $table->timestamps();
             

@@ -10,21 +10,16 @@
         <div class="row">
             <div class="col-md-2 pe-0 col-sm-12">
                 <div class="btn radio-btn mb-3">
-                    <label class="radio"> <input type="radio" value="a" name="trip" checked> Roundtrip <span></span> </label>
+                    <label class="radio"> <input type="radio" value="round_trip" name="trip" checked> Roundtrip <span></span> </label>
                 </div>
             </div>
             <div class="col-md-2 pe-0 col-sm-12">
                 <div class="btn radio-btn mb-3">
-                    <label class="radio">  <input type="radio" value="a" name="trip"> One way <span></span>
+                    <label class="radio">  <input type="radio" value="one_way" name="trip"> One way <span></span>
                     </label>
                 </div>
             </div>
-            <div class="col-md-2 pe-0 col-sm-12">
-                <div class="btn radio-btn mb-3">
-                    <label class="radio"> <input type="radio" value="a" name="trip"> Multi-City <span></span>
-                    </label>
-                </div>
-            </div>
+           
         </div>
         <div class="row">
             <div class="col-md-6 col-12 mb-4">
@@ -122,20 +117,6 @@
             </select>
         </div>
 
-        <div class="col-md-6 col-12 mb-4">
-        <div class="form-control d-flex flex-column" name="travel_type">
-            <p class="h-blue">TRAVEL Type</p>
-            
-            <select class="from-control border-0 outline-none" name="travel_type">
-
-
-                <option value="" hidden selected>Class</option>
-                <option value="1">Window</option>
-
-                <option value="2">Middle</option>
-                <option value="3">Aisle</option>
-            </select>
-        </div>
         
     </div>
 </div>

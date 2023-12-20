@@ -18,6 +18,7 @@
 
 					   @auth
 					   <!-- <a herf="#">logout</a> -->
+					   {{auth()->user()->name}}
 					   <a href="{{route('passenger.logout')}}">logout</a>
 
 					   @endauth
@@ -36,7 +37,7 @@
 			</div>
 			<nav id="nav-menu-container">
 				<ul class="nav-menu">
-					<li><a href="index.html">Home</a></li>
+					<li><a href="index.html"></a></li>
 					<li><a href="about.html">About</a></li>
 					<li><a href="insurance.html">My Ticket</a></li>
 

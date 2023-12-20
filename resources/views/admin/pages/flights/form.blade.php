@@ -56,6 +56,11 @@
     <input type="string"name="price" class="form-control" id="number" placeholder="Enter price">
 </div>
 
+<div class="form-group">
+    <label for="number"> seats</label>
+    <input type="string"name="seats" class="form-control" id="number" placeholder="Enter seats">
+</div>
+
 <div class="from-group">
   <label for="" class="form-label">Upload image</label>
   <input class="form-control" name="image" type="file" id="formFileMultiple" multiple>

@@ -5,7 +5,7 @@
 
 
 <div style="margin:40px;">
-    <h1>All available flights</h1>
+    <h1>All Available Flights </h1>
 
 
     @foreach($Flights as $key=> $Flight)
@@ -89,11 +89,21 @@
 
         <div class="col-md-2">
             <button type="button" class="btn btn-primary">
-            <a class="btn btn-primary form-control text-center" href="{{route('book.form',$Flight->id)}}" > Book now</a>
-                
+                <div> 
+                <a class="btn btn-primary" href="{{route('book.form',$Flight->id).'?trip='.$search_data}}" > Book now</a>
+                </div>
+            </button>
+         <div> 
+            <br>
+         </div>
+            <div>  
+            <a class="btn btn-danger" href="" > Cencel Booking</a>
+            </div>   
         </div>
     </div>
     @endforeach
+
+    
 
 
     @endsection
