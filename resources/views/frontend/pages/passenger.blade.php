@@ -13,15 +13,11 @@
                 <h2>Personal Details</h2>
 
                 <div class="form-group">
-                    <label for="name">First Name</label>
-                    <input type="text" name=" first_name" class="form-control" id="name" placeholder="Enter your first name">
+                    <br>
+                    <label for="name">Name :</label>
+                    
+                    <input type="text" required value="" name="name" class="form-control" id="name" placeholder="Enter your first name">
                 </div>
-
-                <div class="form-group">
-                    <label for="name">Last Name</label>
-                    <input type="text" name="last_name" class="form-control" id="name" placeholder="Enter your last name">
-                </div>
-
 
 
                 <div class="form-group">
@@ -82,19 +78,21 @@
                             <input type="hidden" name="trip_type" value="{{$trip['trip']}}">
                             <input type="hidden" name="flight_id" value="{{$Flights->id}}">
 
-                                <h6> Departure date time</h6>
+                                <h6> Departure date and time</h6>
 
-                               {{$trip['departure_time']}} {{$Flights->departure_time}} <br>
+                              <h5> {{$trip['departure_time']}}</h5> <br>
+                               <h5> {{$Flights->departure_time}} </h5>
                                 <h6>From_airport</h6>
-                                {{$Flights->fromAirport->airport_name}}
+                              <h6>  {{$Flights->fromAirport->airport_name}}</h6>
 
                             </div>
 
                             <div class="col-md-6">
                                 <h6> Arrival date and time</h6>
-                                {{$Flights->arrival_time}} <br>
+                              <h5>  {{$trip['arrival_time']}} </h5> <br>
+                               <h5>  {{$Flights->arrival_time}} </h5>
                                 <h6> To_Airport</h6>
-                                {{$Flights->toAirport->airport_name}}
+                              <h6>  {{$Flights->toAirport->airport_name}}</h6>
 
 
 
@@ -109,7 +107,7 @@
                             </div>
                             <div class="col-md-7">
                                 <h6> Airlines</h6>
-                                {{$Flights->airline->Airlines_name}}
+                               <h4> {{$Flights->airline->Airlines_name}}</h4>
 
                             </div>
 
@@ -117,7 +115,7 @@
                                 <h6>price {{$Flights->price}}
                             </h6>
                             <p>
-                            {{$trip['trip']}}
+                           <h4> {{$trip['trip']}} </h4>
                             </p>
                             </div>
                         </div>

@@ -19,6 +19,7 @@ use App\Http\Controllers\Frontend\SearchController;
 use App\Http\Controllers\Frontend\seatController as FrontendseatController;
 use App\Http\Controllers\Frontend\AirlinesController as FrontendAirlinesController;
 use App\Http\Controllers\Frontend\BuynowController;
+use App\Http\Controllers\Frontend\MyticketController;
 use App\Http\Controllers\SslCommerzPaymentController;
 
 /*
@@ -44,6 +45,8 @@ Route::get('/user/login',[ControllersFrontendUserController::class,'login'])->na
 Route::post('/user/login',[ControllersFrontendUserController::class,'dologin'])->name('user.login');
 
 Route::get('/single-airline/{id}',[FrontendAirlinesController::class,'singleairlineview'])->name('single.airline');
+
+Route::get('/myticket',[MyticketController::class,'myticket'])->name('myticket');
 
 
 Route::get('/search',[FrontendHomeController::class,'search'])->name('airlines.search');

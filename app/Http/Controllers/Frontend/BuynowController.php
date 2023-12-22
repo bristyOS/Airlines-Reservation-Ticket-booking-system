@@ -13,6 +13,9 @@ class BuynowController extends Controller
     public function successful(Request $request ,$id){
       
         //validation here
+       
+
+
         // dd($i);
         // dd($request->all());
     //    dd(auth()->user()->id);
@@ -25,6 +28,7 @@ class BuynowController extends Controller
         // booking here
         $booking=Booking::create([
             'user_id'=>auth()->user()->id,
+            'Name'=>$request->name,
             'departure_date'=>$request->departure_date,
             'arrival_date'=>$request->return_date,
             'trip_type'=>$request->trip_type,
@@ -104,14 +108,14 @@ public function payment($Flight,$passenger){
 
 
     public function printticket($id){
-        $Flight_id=Flight::find($id);
+        $booking=Booking::find($id);
     
         // dd($Flights);
       
-        return view('frontend.pages.printticket',compact('Flight_id'));
+        return view('frontend.pages.printticket',compact('booking'));
     }
 
-
+   
    
     
 }

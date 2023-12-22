@@ -110,10 +110,9 @@
 
 
                 <option value="" hidden selected>Class</option>
-                <option value="1">Economy</option>
-
-                <option value="2">Premium</option>
-                <option value="3">Business</option>
+                <option value="Economy">Economy</option>
+                <option value="Premium">Premium</option>
+                <option value="Business">Business</option>
             </select>
         </div>
 

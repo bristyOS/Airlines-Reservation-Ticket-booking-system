@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('airlines',20);
             $table->string('price');
             $table->string('seats');
+            $table->string('travel_class');
             $table->string('image')->nullable();
             $table->timestamps();
             

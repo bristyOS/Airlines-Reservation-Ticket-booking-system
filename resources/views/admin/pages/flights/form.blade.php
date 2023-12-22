@@ -61,6 +61,23 @@
     <input type="string"name="seats" class="form-control" id="number" placeholder="Enter seats">
 </div>
 
+
+<div class="form-group">
+    <label for="exampleInputlocation1">Travel_class</label>
+    <select name="travel_class" id="" class="form-control">
+    
+    
+    <option value="travel_class" hidden selected></option>
+                <option value="Economy">Economy</option>
+
+                <option value="Premium">Premium</option>
+                <option value="Business">Business</option>
+    
+   </select>
+    </div>
+    
+
+
 <div class="from-group">
   <label for="" class="form-label">Upload image</label>
   <input class="form-control" name="image" type="file" id="formFileMultiple" multiple>

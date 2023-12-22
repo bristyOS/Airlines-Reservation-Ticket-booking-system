@@ -190,8 +190,8 @@ class SslCommerzPaymentController extends Controller
                 ]);
 
                 notify()->success('payment successful');
-                $Flight_id=Booking::where('Transaction_id',$tran_id)->first()->flight_id;
-                return view('Frontend.pages.buynow',compact('Flight_id'));
+                $ticket=Booking::where('Transaction_id',$tran_id)->first();
+                return view('Frontend.pages.buynow',compact('ticket'));
             }else {
             #That means something wrong happened. You can redirect customer to your product page.
             echo "Invalid Transaction";

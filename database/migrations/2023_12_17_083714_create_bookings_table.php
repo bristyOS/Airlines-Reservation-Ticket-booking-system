@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('total_price');
             $table->string('payment_status');
             $table->string('Status');
+            $table->string('Name');
             $table->string('Transaction_id')->unique();
             $table->timestamps();
            

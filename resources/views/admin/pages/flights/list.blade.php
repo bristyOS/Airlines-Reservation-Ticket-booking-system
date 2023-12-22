@@ -15,6 +15,8 @@
       <th scope="col">departure_time</th>
       <th scope="col">airlines</th>
       <th scope="col">price</th>
+      <th scope="col">seats</th>
+      <th scope="col">travel_class</th>
       <th scope="col">image</th>
       <th scope="col">Action</th>
     </tr>
@@ -31,6 +33,8 @@
       <td>{{$flight->departure_time}}</td>
       <td>{{$flight->airline->Airlines_name}}</td>
       <td>{{$flight->price}}</td>
+      <td>{{$flight->seats}}</td>
+      <td>{{$flight->travel_class}}</td>
 </td>
 <td>
 <img height="70" width="70" src="{{url('uploads/'.$flight->image)}}" alt="image">

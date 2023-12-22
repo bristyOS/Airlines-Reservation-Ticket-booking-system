@@ -16,7 +16,9 @@ class SearchController extends Controller
 
         $search_data=json_encode($request->all(),true);
         
-        $Flights=Flight::where('from_airport',$request->flying_from)->where('to_airport',$request->flying_to)->get();
+        // dd($request->all());
+        $Flights=Flight::where('from_airport',$request->flying_from)->where('to_airport',$request->flying_to)
+                        ->where('travel_class',$request->travel_class)->get();
         
       
 

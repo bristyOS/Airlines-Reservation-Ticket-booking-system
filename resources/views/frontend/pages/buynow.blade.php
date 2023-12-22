@@ -6,9 +6,12 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
   </head>
     <style>
+      .header-top{
+        display: none;
+      }
       body {
         text-align: center;
-        padding: 40px 0;
+        padding: 0px 0;
         background: #EBF0F5;
       }
         h1 {
@@ -48,7 +51,7 @@
         <h1>Success</h1> 
         <p>We received your purchase request;<br/> we'll be in touch shortly!</p>
 
-    <a href="{{route('print.ticket',$Flight_id)}}"class="btn btn-danger">Print your Ticket</a>
+    <a href="{{route('print.ticket',$ticket->id)}}"class="btn btn-danger">See your Ticket</a>
       </div>
     </body>
     

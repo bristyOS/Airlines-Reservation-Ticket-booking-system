@@ -39,7 +39,7 @@
 				<ul class="nav-menu">
 					<li><a href="index.html"></a></li>
 					<li><a href="about.html">About</a></li>
-					<li><a href="insurance.html">My Ticket</a></li>
+					<li><a href="{{route('myticket')}}">My Ticket</a></li>
 
 
 					<form action="{{route('airlines.search')}}" method="get">
