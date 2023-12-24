@@ -62,13 +62,15 @@
     <div class="col-md-6 col-12 mb-4">
         <div class="form-control d-flex flex-column">
             <p class="h-blue">DEPARTING</p>
-            <input class="inputbox textmuted" name="departure_time" type="date">
+           
+            <input type="date" id="txtDate1" name="departure_time" />
+
         </div>
     </div>
     <div class="col-md-6 col-12 mb-4">
         <div class="form-control d-flex flex-column">
             <p class="h-blue">RETURNING</p>
-            <input class="inputbox textmuted " name="arrival_time" type="date">
+            <input class="inputbox textmuted " id="txtDate2" name="arrival_time" type="date">
         </div>
     </div>
 </div>

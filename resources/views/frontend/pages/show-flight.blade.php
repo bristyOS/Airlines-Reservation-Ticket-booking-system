@@ -8,7 +8,7 @@
 
 
     @if($Flights->count()>0)
-    <h1>{{$Flights->count()}} Available Flights </h1>
+    <h2>{{$Flights->count()}} Available Flights </h2>
 
 
     @foreach($Flights as $key=> $Flight)
@@ -47,14 +47,14 @@
                 <h6>{{$Flight->departure_time}}
             </div>
             </h6>
-
+           <br>
             <h6> Airlines</h6>
 
             <div class="fw-tripinfo-date">
-                <h6>{{$Flight->airline->Airlines_name}}
+                <h4>{{$Flight->airline->Airlines_name}}</h4>
             </div>
-            </h6>
-            <div class="fw-tripinfo-date">{{$Flight->image}}</div>
+            
+            
 
         </div>
 
@@ -135,9 +135,7 @@
             <div>
                 <br>
             </div>
-            <div>
-                <a class="btn btn-danger" href=""> Cencel Booking</a>
-            </div>
+            
         </div>
        
     </div>

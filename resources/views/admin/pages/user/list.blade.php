@@ -1,7 +1,7 @@
 @extends('admin.master')
 @section('content')
 <h2> User list </h2>
-<a href="{{route('user.form')}}" type="button" class="btn btn-success">create new user</a>
+<a href="{{route('user.form')}}" type="button" class="btn btn-success">see user list</a>
 
 
 <table class="table">

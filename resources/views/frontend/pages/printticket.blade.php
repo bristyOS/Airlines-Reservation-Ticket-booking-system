@@ -51,9 +51,9 @@ border-left:3px dotted blue;
            
 
             <h6> Boarding Time</h6>
-            {{$booking->flight->toAirport->airport_name}}
+             16:00 PM
           
-            <h6> Economy Class</h6>
+            
      </div>
 
 
@@ -78,12 +78,15 @@ border-left:3px dotted blue;
     
 
 
+<button onclick="printlist()">print ticket</button>
 
+<script>
 
-
-
-
-
+    function printlist(){
+        window.print();
+    }
+    </script>
+  
 
 
 @endsection

@@ -14,7 +14,7 @@
 
                 <div class="form-group">
                     <br>
-                    <label for="name">Name :</label>
+                    <label for="name">Name </label>
                     
                     <input type="text" required value="" name="name" class="form-control" id="name" placeholder="Enter your first name">
                 </div>

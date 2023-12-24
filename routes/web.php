@@ -61,6 +61,7 @@ Route::get('/bookform/{id}',[SearchController::class,'passenger'])->name('book.f
 
 
 Route::post('/successful/form/{id}',[BuynowController::class,'successful'])->name('successful.form');
+
 Route::get('/printticket/form/{id}',[BuynowController::class,'printticket'])->name('print.ticket');
 
 // SSLCOMMERZ Start
